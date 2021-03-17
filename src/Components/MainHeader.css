@@ -1,0 +1,14 @@
+.MainHeader {
+    perspective: 200px;
+}
+
+.MainHeader h1 {
+    display: block;
+    transform: rotate3d(1, 0, 0, 45deg);
+    width: fit-content;
+    margin: 0 auto;
+}
+.MainHeader div {
+    width: fit-content;
+    margin: 0 auto;
+}

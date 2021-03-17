@@ -1,0 +1,9 @@
+.SpaceCraftSelector select {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.SpaceCraftSelector option {
+    padding: 0.3rem 0.8rem;
+    text-transform: uppercase;
+}

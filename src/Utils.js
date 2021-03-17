@@ -1,8 +1,5 @@
-import {
-    action,
-    observable
-} from 'mobx'
+const alphabeticalSort = (a, b) => a.localeCompare(b)
 
-const store = observable({})
-
-export default store
+export {
+    alphabeticalSort
+}
