@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { observer } from 'mobx-react-lite'
 
 import store from 'Store'
@@ -18,6 +18,9 @@ const SpacecraftOption = props => {
 
 const SpaceCraftSelector = observer(props => {
     const { manufacturers, selectManufacturers } = props.store || store
+
+    if (!manufacturers.length)
+        return <section>...loading</section>
 
     return (
         <form className='SpaceCraftSelector'>
