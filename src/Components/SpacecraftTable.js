@@ -41,7 +41,7 @@ const SpacecraftTable = observer(props => {
             tabIndex='0'
         >
             <table className='attr-table'>
-                <caption>Spaceships </caption>
+                <caption>Starships</caption>
 
                 <thead>
                     <tr>
