@@ -19,3 +19,7 @@
     width: 100%;
     white-space: nowrap;
 }
+
+.SpaceCraftSelector option:not(:last-child) {
+    border-bottom: 1px solid hsla(0, 0%, 92%);
+}
