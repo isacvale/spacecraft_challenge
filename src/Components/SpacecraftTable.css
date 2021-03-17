@@ -1,0 +1,83 @@
+.SpacecraftTable {
+    overflow: auto;
+    width: 100%;
+}
+
+.SpacecraftTable table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.SpacecraftTable td,
+.SpacecraftTable tbody th {
+    padding: 0.6rem 1rem;
+    text-align: left;
+}
+
+.SpacecraftTable thead tr {
+    background: goldenrod;
+    color: white;
+}
+
+.SpacecraftTable thead th {
+    padding: 0.6rem;
+}
+
+.SpacecraftTable tbody th {
+    min-width: 12rem;
+}
+
+.SpacecraftTable tbody tr:not(:last-child) {
+    border-bottom: 2px solid hsl(0, 0%, 92%);
+}
+
+.SpacecraftTable tbody tr:nth-child(even) {
+    background: lightgoldenrodyellow;
+}
+
+.SpacecraftTable [data-type="number"] {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .SpacecraftTable table,
+    .SpacecraftTable tr {
+        display: block;
+    }
+
+    .SpacecraftTable tbody th {
+        padding: 0.1rem 2rem;
+    }
+
+    .SpacecraftTable tr {
+        padding: 1rem 0;
+    }
+
+    .SpacecraftTable th,
+    .SpacecraftTable td {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        text-align: left;
+        padding: 0.1rem 2rem;
+    }
+
+    .SpacecraftTable thead {
+        display: none;
+    }
+
+    .SpacecraftTable th::before,
+    .SpacecraftTable td::before {
+        content: attr(data-label);
+        align-self: center;
+        font-weight: 300;
+        text-align: right;
+
+        font-size: 0.7rem;
+        margin-right: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    .SpacecraftTable [data-type="number"] {
+        text-align: left;
+    }
+}

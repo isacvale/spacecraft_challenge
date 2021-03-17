@@ -1,5 +1,5 @@
 .MainHeader {
-    perspective: 200px;
+    perspective: 180px;
 }
 
 .MainHeader h1 {
@@ -10,5 +10,7 @@
 }
 .MainHeader div {
     width: fit-content;
-    margin: 0 auto;
+    margin: -0.6rem auto;
+    font-weight: 900px;
+    -webkit-text-stroke: 1px gold;
 }

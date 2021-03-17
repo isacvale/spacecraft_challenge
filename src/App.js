@@ -5,7 +5,6 @@ import store from 'Store'
 import './App.css';
 
 function App() {
-  // useEffect(() => alert('ahoy'), [])
   useEffect(() => {
       store.fetchData()
   }, [])

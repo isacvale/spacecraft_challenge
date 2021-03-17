@@ -1,6 +1,5 @@
 import {
     action,
-    computed,
     observable
 } from 'mobx'
 
@@ -23,12 +22,14 @@ const store = observable({
         const data = await response.json()
 
         this.spaceships = [ ...this.spaceships, ...data.results ]
+            .sort((a, b) => a.manufacturer.localeCompare(b.manufacturer))
 
         if (data.next)
             this.fetchData(data.next)
         else
             this.listManufacturers()
     },
+
     listManufacturers: function () {
         this.manufacturers = this.spaceships
             .reduce((list, ship) => {
@@ -40,12 +41,13 @@ const store = observable({
             }, [])
             .sort(alphabeticalSort)
     },
+
     selectManufacturers: function (selected) {
         this.selectedManufacturers = [...selected.target.selectedOptions]
             .map(option => option.value)
     }
 }, {
-    loadOptions: action.bound,
+    fetchData: action.bound,
     listManufacturers: action.bound,
     selectManufacturers: action.bound
 })

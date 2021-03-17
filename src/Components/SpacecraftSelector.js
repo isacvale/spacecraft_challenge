@@ -29,7 +29,7 @@ const SpaceCraftSelector = observer(props => {
                     name='manufacturer'
                     multiple
                     onChange={selectManufacturers}
-                    size='10'
+                    size='6'
                     value={store.selectedManufacturers}
                 >
                     { manufacturers.map(manufacturer => 
